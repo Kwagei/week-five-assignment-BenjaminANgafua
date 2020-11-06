@@ -1,6 +1,6 @@
-var player = 100; //This is your limit of number you're logging in.
+var player = 100; //A generated random number between 1 and 100.
 var guessAmount = 10; //Number of time you are to make a guess.
-var count = 10; //This will display number of chances left in the game for the player.
+var count = 10; //Number of chances left in the game for the player.
 var magical = Math.floor(Math.random() *player); //This is the mathematical part(Math.floor(Math.random() with *player is not constant it can be substituded) that does the random selection for you in the background. That's the reason I give the property magical to it.
 //Below are the necessary condition for a best out put.
 while (Attempts != magical) { var Attempts = prompt("Choose any number from 1 to " + player);
@@ -11,9 +11,9 @@ while (Attempts != magical) { var Attempts = prompt("Choose any number from 1 to
     if (Attempts > magical) {document.write("Too High");}
     //This will display number of chances left in the game for the player.
     document.write("<p>" + count + " More attempt</p>");
-    // Aplayer guess is the same as the random number, "You Win" and end the game.
+    // A player guess is the same as the random number, "You Win" and game end.
     if (Attempts == magical){document.write("You Win");}
-    // A player failures to guess the number in 10 chances, "You Lose" and end the game.
+    // A player failures to guess the number in 10 chances, "You Lose" and game end..
     if (count < 1) {document.write("You Lose");}
 
     if (count < 1) {document.write("<p> Answer " + magical + "</p>");
