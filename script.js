@@ -20,39 +20,45 @@ function begin(){main_div.style.visibility = "visible";
 }
 function checkGuess(){var your_guess = Number(guess_box.value);
 
-    if (count_guess <=10){ if (your_guess < random_num){
-        guesses.textContent += your_guess + " ";
-        document.getElementById("chances").innerHTML = "<div> Chances-attempted " + count_guess + "</div>";
-        high_or_low.textContent = "your guess is Low";
-        high_or_low.classList.add("wrong");
-        count_guess++;
-        guess_box.value = "";
-    }
-else if(your_guess > random_num){
-        guesses.textContent += your_guess + " ";
-        high_or_low.textContent = "your guess is High";
-        high_or_low.classList.add("wrong");
-        count_guess++;
-        guess_box.value = ""; /*blank input field*/
+    if (count_guess <=10){
+        
+        if (your_guess < random_num){
+            guesses.textContent += your_guess + " ";
+            document.getElementById("chances").innerHTML = "<div> Chances-attempted " + count_guess + "</div>";
+            high_or_low.textContent = "your guess is Low";
+            high_or_low.classList.add("wrong");
+            count_guess++;
+            guess_box.value = "";
         }
-       
-        // if your guess is equal the random number value.
-else{   guesses.textContent += your_guess + " "; /*record of your guess*/
-        high_or_low.textContent = "You win!"; /*guess equal to the random-number number*/
-        high_or_low.classList.add("success"); /*Applied class created from stylesheet to your guess*/
-        guess_box.value = ""; /*blank input field*/
-        gameOver(); /*end the as you succeed*/
-    }
-    }
-    // Chances over and your guess is not equal to the random-number number.
 
-    else{ guesses.textContent += your_guess + " ";
-    high_or_low.textContent = "You Lose!";/*guess not equal to the random-number number and chances over*/
-    high_or_low.classList.add("wrong");/*Applied class created from stylesheet to your guess*/
-    guess_box.value = ""; /*blank input field*/
-    gameOver();/*end the as you lost*/
+        else if(your_guess > random_num){
+            guesses.textContent += your_guess + " ";
+            high_or_low.textContent = "your guess is High";
+            high_or_low.classList.add("wrong");
+            count_guess++;
+            guess_box.value = ""; /*blank input field*/
+        }
+        
+            // if your guess is equal the random number value.
+         else {
+             guesses.textContent += your_guess + " "; /*record of your guess*/
+            high_or_low.textContent = "You win!"; /*guess equal to the random-number number*/
+            high_or_low.classList.add("success"); /*Applied class created from stylesheet to your guess*/
+            guess_box.value = ""; /*blank input field*/
+            gameOver(); /*end the as you succeed*/
+        }
+    }
+        // Chances over and your guess is not equal to the random-number number.
+
+    else {
+        guesses.textContent += your_guess + " ";
+        high_or_low.textContent = "You Lose!";/*guess not equal to the random-number number and chances over*/
+        high_or_low.classList.add("wrong");/*Applied class created from stylesheet to your guess*/
+        guess_box.value = ""; /*blank input field*/
+        gameOver();/*end the as you lost*/
+    }
 }
-}
+
 function gameOver(){
     btn_check.disabled = true;
     guess_box.disabled = true;
