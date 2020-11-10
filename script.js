@@ -20,7 +20,7 @@ function begin(){main_div.style.visibility = "visible";
 }
 function checkGuess(){var your_guess = Number(guess_box.value);
 
-    if (count_guess <=10){
+    if (count_guess <=9){
         
         if (your_guess < random_num){
             guesses.textContent += your_guess + " ";
