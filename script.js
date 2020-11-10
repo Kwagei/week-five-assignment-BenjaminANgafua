@@ -32,7 +32,7 @@ function checkGuess(){var your_guess = Number(guess_box.value);
         }
 
         else if(your_guess > random_num){
-            guesses.textContent += your_guess + " ";
+            guesses.textContent += your_guess + " ,";
             high_or_low.textContent = "your guess is High";
             high_or_low.classList.add("wrong");
             count_guess++;
