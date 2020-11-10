@@ -40,6 +40,7 @@ else if(your_guess > random_num){
 else{   guesses.textContent += your_guess + " "; /*record of your guess*/
         high_or_low.textContent = "You win!"; /*guess equal to the random-number number*/
         high_or_low.classList.add("success"); /*Applied class created from stylesheet to your guess*/
+        guess_box.value = ""; /*blank input field*/
         gameOver(); /*end the as you are successful*/
     }
     }
@@ -48,6 +49,7 @@ else{   guesses.textContent += your_guess + " "; /*record of your guess*/
     else{ guesses.textContent += your_guess + " ";
     high_or_low.textContent = "You Lose!";/*guess not equal to the random-number number and chances over*/
     high_or_low.classList.add("wrong");/*Applied class created from stylesheet to your guess*/
+    guess_box.value = ""; /*blank input field*/
     gameOver();/*end the as you are lost*/
 }
 }
