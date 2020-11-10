@@ -22,10 +22,10 @@ body{
     visibility: hidden;}
 
     .guide-btn{
-        background-color: rgb(241, 238, 18);
+        background-color: rgb(241, 18, 37);
         padding: 8px 25px;
         margin: 10px auto;
-        color: rgb(7, 7, 7);
+        color: #ffffff;
         font-size: 20px;
         border-radius: 5px;
 }
