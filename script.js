@@ -12,10 +12,11 @@ var high_or_low = document.getElementById("high-or-low");
 
 var random_num = Math.floor(Math.random()*100) + 1;
 var count_guess =1;
+var btn_hide = document.getElementById("hide");
+function hide(){guide_div.style.display = "none";}
+function guide(){guide_div.style.display = "block";}
 
-function guide(){guide_div.style.visibility = "visible";}
-
-function begin(){main_div.style.visibility = "visible";
+function begin(){main_div.style.display = "block";
 
 }
 function checkGuess(){var your_guess = Number(guess_box.value);
@@ -23,7 +24,7 @@ function checkGuess(){var your_guess = Number(guess_box.value);
     if (count_guess <=9){
         
         if (your_guess < random_num){
-            guesses.textContent += your_guess + " ";
+            guesses.textContent += your_guess + ", ";
             document.getElementById("chances").innerHTML = "<div> Chances-attempted " + count_guess + "</div>";
             high_or_low.textContent = "your guess is Low";
             high_or_low.classList.add("wrong");
@@ -32,7 +33,7 @@ function checkGuess(){var your_guess = Number(guess_box.value);
         }
 
         else if(your_guess > random_num){
-            guesses.textContent += your_guess + " ,";
+            guesses.textContent += your_guess + ", ";
             high_or_low.textContent = "your guess is High";
             high_or_low.classList.add("wrong");
             count_guess++;
@@ -41,7 +42,7 @@ function checkGuess(){var your_guess = Number(guess_box.value);
         
             // if your guess is equal the random number value.
          else {
-             guesses.textContent += your_guess + " "; /*record of your guess*/
+             guesses.textContent += your_guess + ", "; /*record of your guess*/
             high_or_low.textContent = "You win!"; /*guess equal to the random-number number*/
             high_or_low.classList.add("success"); /*Applied class created from stylesheet to your guess*/
             guess_box.value = ""; /*blank input field*/
