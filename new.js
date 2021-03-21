@@ -1,4 +1,4 @@
-var count_guess = 10;
+var count_guess = 0;
 var btn_guide = document.getElementById("guide");
 var btn_begin = document.getElementById("begin");
 var btn_check = document.getElementById("check");
@@ -14,12 +14,11 @@ var random_num = Math.floor(Math.random() * 99) + 1;
 
 var btn_hide = document.getElementById("hide");
 
-
 function checkGuess() {
     var your_guess = Number(guess_box.value);
 
-    if (count_guess > 1) {
-        count_guess--;
+    if (count_guess <= 10) {
+        count_guess++;
 
         if (your_guess < random_num) {
 
@@ -66,10 +65,4 @@ function begin() {
 function gameOver() {
     btn_check.disabled = true;
     guess_box.disabled = true;
-    document.getElementById("answer").innerHTML =
-        "<div> The number is " + random_num + "</div>";
-} <
-input name = "somename"
-
-/
->
+}
