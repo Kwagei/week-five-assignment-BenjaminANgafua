@@ -1,9 +1,8 @@
 var count_guess = 10;
 var btn_guide = document.getElementById("guide");
-var btn_begin = document.getElementById("begin");
+var btn_begin = document.getElementsByClassName("begin-btn");
 var btn_check = document.getElementById("check");
 
-var main_div = document.getElementById("main-div");
 var guide_div = document.getElementById("guide-div")
 
 var guess_box = document.getElementById("guess-box");
@@ -24,14 +23,14 @@ function checkGuess() {
         if (your_guess < random_num) {
 
             guesses.textContent += your_guess + ", ";
-            document.getElementById("chances").innerHTML = "<div> Chances-attempted " + count_guess + "</div>";
+            document.getElementById("chances").innerHTML = "<div> Chances-remain " + count_guess + "</div>";
             high_or_low.textContent = "your guess is Low";
             high_or_low.classList.add("wrong");
             guess_box.value = "";
         } else if (your_guess > random_num) {
             guesses.textContent += your_guess + ", ";
             high_or_low.textContent = "your guess is High";
-            document.getElementById("chances").innerHTML = "<div> Chances-attempted " + count_guess + "</div>";
+            document.getElementById("chances").innerHTML = "<div> Chances-remain " + count_guess + "</div>";
             high_or_low.classList.add("wrong");
             guess_box.value = ""; /*blank input field*/
         }
@@ -57,10 +56,18 @@ function checkGuess() {
 
 function hide() { guide_div.style.display = "none"; }
 
-function guide() { guide_div.style.display = "block"; }
+function hint() {
+    let hint = document.getElementById("hint");
+    if (random_num % 2 === 0) {
+        hint.innerText += " the answer is an even number"
+    } else {
+        hint.innerText += " the answer is odd number"
+    }
+    console.log("The answer in console", random_num)
+}
 
 function begin() {
-    main_div.style.display = "block";
+    document.getElementById("container").style.display = "flex";
 }
 
 function gameOver() {
@@ -68,8 +75,4 @@ function gameOver() {
     guess_box.disabled = true;
     document.getElementById("answer").innerHTML =
         "<div> The number is " + random_num + "</div>";
-} <
-input name = "somename"
-
-/
->
+}
