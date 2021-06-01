@@ -1,14 +1,13 @@
 * {
     box-sizing: border-box;
-    color: rgb(252, 252, 250);
 }
 
 body {
     margin: 0;
     padding: 0;
-    background-color: rgb(77, 80, 80);
-    text-align: center !important;
+    text-align: center;
     font-family: monospace;
+    background-color: rgb(151, 133, 72);
 }
 
 #container {
@@ -18,27 +17,35 @@ body {
 }
 
 #guide-div {
-    /* background-color: rgb(5, 4, 29); */
+    /*  */
+    background-color: rgb(213, 216, 218);
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
-    border: 4px groove silver;
+    border: 1px block;
+    text-align: left;
     width: 20em;
     height: 19em;
     padding: 0em 3em 20em 3em;
+    box-shadow: 1px 10px #bec6c7;
 }
 
 .guide-btn {
     background-color: rgb(65, 4, 9);
-    padding: 4px 10px;
+    padding: 4px 10243px;
     margin: 10px 15%;
     color: #ffffff;
     font-size: 20px;
     border-radius: 5px;
 }
 
-.hide-btn {
-    margin: 10px auto;
+#hint {
+    cursor: pointer;
+    width: fit-content;
+    color: indigo;
+}
+
+#hide {
     font-size: 20px;
     cursor: pointer;
     border-radius: 5px;
@@ -46,7 +53,6 @@ body {
 
 .begin-btn {
     border: 4px groove silver;
-    background-color: rgb(5, 10, 48);
     padding: 4px 15px;
     margin: 10px auto;
     font-size: 20px;
@@ -54,7 +60,6 @@ body {
 
 .reset-btn {
     border: 4px groove silver;
-    background-color: rgb(5, 10, 48);
     font-size: 17px;
     border-radius: 5px;
     text-align: center;
@@ -65,12 +70,12 @@ body {
     font-size: 20px;
 }
 
-.check-btn {
+#check {
     border: 4px groove silver;
-    background-color: rgb(5, 10, 48);
-    padding: 4px 15px;
+    /* padding: 4px 15px; */
     margin: 10px auto;
-    font-size: 20px;
+    font-size: 17px;
+    background-color: teal;
     border-radius: 5px;
 }
 
@@ -91,7 +96,7 @@ body {
 }
 
 #style {
-    /* background-color: rgb(4, 2, 32); */
+    background-color: rgb(210, 223, 221);
     border: 4px groove silver;
     padding: 12px 12px 55px 12px;
     border-radius: 2%;
@@ -112,7 +117,4 @@ input {
     #container {
         display: block;
     }
-    /* #guide-div {
-        display: none;
-    } */
 }

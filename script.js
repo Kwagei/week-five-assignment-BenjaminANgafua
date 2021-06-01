@@ -56,6 +56,8 @@ function checkGuess() {
 
 function hide() { guide_div.style.display = "none"; }
 
+function guide() { guide_div.style.display = "block"; }
+
 function hint() {
     let hint = document.getElementById("hint");
     if (random_num % 2 === 0) {
@@ -68,6 +70,7 @@ function hint() {
 
 function begin() {
     document.getElementById("container").style.display = "flex";
+    guide_div.style.display = "none"
 }
 
 function gameOver() {
