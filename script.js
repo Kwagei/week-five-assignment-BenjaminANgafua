@@ -72,7 +72,7 @@ function begin() {
     document.getElementById("container").style.display = "flex";
     guide_div.style.display = "none"
 }
-
+//End game
 function gameOver() {
     btn_check.disabled = true;
     guess_box.disabled = true;

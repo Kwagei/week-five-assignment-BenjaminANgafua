@@ -17,7 +17,6 @@ body {
 }
 
 #guide-div {
-    /*  */
     background-color: rgb(213, 216, 218);
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
@@ -72,7 +71,6 @@ body {
 
 #check {
     border: 4px groove silver;
-    /* padding: 4px 15px; */
     margin: 10px auto;
     font-size: 17px;
     background-color: teal;
