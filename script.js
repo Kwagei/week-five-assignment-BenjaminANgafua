@@ -72,7 +72,7 @@ function hint() {
     if (random_num % 2 === 0) {
         hint.innerText += " the answer is an even number"
     } else {
-        hint.innerText += " the answer is odd number"
+        hint.innerText += " the answer is an odd number"
     }
     console.log("The answer in console", random_num)
 }
