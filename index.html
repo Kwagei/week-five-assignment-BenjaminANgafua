@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUESS GAME</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h2>Welcome to Benjamin's Guess Game </h2>
+
+    <button type="button" class="begin-btn" onclick="begin()">
+            Begin
+        </button>
+    <div id="container">
+        <div id="guide-div">
+            <p style="margin-left: 30%;"><u>Caution:</u> </p>
+            <ol style="text-align:left;">
+                <li>Guess a random number between 1 and 100 </li> <br>
+                <li>You have 10 chances to try</li>
+                <li>You will be alerted <br> if you win or lose</li><br>
+                <li>You will be alerted if your guess is high or low</li>
+                </0l>
+                <div type="button" id="hide" onclick="hide()">
+                    &#10062;
+                </div>
+        </div>
+        <div id="style">
+            <h4><span style="font-size: larger; cursor: pointer;" onclick="guide()"><<=(&#x1F448;)</span> See the instruction to this game</h4>
+            <p>Let's get started!</p>
+            <input name="num" placeholder="Guess-a-number" id="guess-box" class="guess-box" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength); if (this.value  > 100){alert('sorry out of range')}" type="number"
+                maxlength="3" autofocus title="Only number" />
+
+            <button type="submit" id="check" onclick="checkGuess()">Submit</button><br>
+            <br>
+            <br>
+            <div id="guesses">Your Guess(es): &nbsp;</div> <br>
+            <div id="chances"></div>
+            <div id="high-or-low" class=""></div>
+            <div id="answer"></div> <br>
+            <button type="reset" class="reset-btn" onclick="window.location.reload()">Restart</button><br> <br>
+            <b id="hint" onclick="hint()">Hint: </b> <br><br> &copy;Copyright all rights reserved.
+        </div>
+    </div>
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
