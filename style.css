@@ -22,16 +22,15 @@ h2 {
 
 #guide-div {
     display: none;
-    background-color: rgb(218, 218, 213);
-    border-top-left-radius: 50%;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    border: 1px block;
-    text-align: left;
-    width: 20em;
-    height: 19em;
-    padding: 0em 3em 20em 3em;
-    box-shadow: 1px 10px #bec6c7;
+background-color: rgb(218, 218, 213);
+border-top-left-radius: 50%;
+border-bottom-left-radius: 50%;
+border-bottom-right-radius: 50%;
+border: 1px block;
+text-align: left;
+height: 1px;
+padding: 0em 1em 17em 1em;
+box-shadow: 1px 10px #bec6c7;
 }
 
 .guide-btn {
